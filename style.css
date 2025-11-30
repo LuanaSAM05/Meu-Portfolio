@@ -2,13 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: poppins, sans-serif;
 }
 
+
 body {
     color: #ededed;
+    background: linear-gradient(135deg, #02dcd8, #b70932, #ffb3d9);
+    scroll-behavior: smooth;
+    overscroll-behavior-y: contain;
 }
 
+/* HEADER */
 .header {
     position: fixed;
     top: 0;
@@ -50,15 +56,18 @@ body {
     color: #02dcd8;
 }
 
+/* HOME */
 .home {
     position: relative;
     width: 100%;
     justify-content: space-between;
     height: 100vh;
-    background: linear-gradient(135deg, #02dcd8, #b70932, #ffb3d9);
+    background:transparent;
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
+    min-height: 100vh;
+    padding-top:100px;
 }
 
 .home-content {
@@ -73,7 +82,7 @@ body {
     animation-delay: .7s;
 }
 
-.home-content h3:nth-of-type(2){
+.home-content h3:nth-of-type(2) {
     margin-bottom: 30px;
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
@@ -106,7 +115,7 @@ body {
 }
 
 .home-sci a {
-    display: inline-flex;  
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -122,15 +131,17 @@ body {
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
-    
 }
 
 .home-sci a:hover {
     background: #02dcd8;
     color: #fff;
-    box-shadow: 0 0 5px #02dcd8, 0 0 25px #02dcd8,
-    0 0 50px #02dcd8, 0 0 100px #02dcd8,
-    0 0 200px #02dcd8,
+    box-shadow:
+        0 0 5px #02dcd8,
+        0 0 25px #02dcd8,
+        0 0 50px #02dcd8,
+        0 0 100px #02dcd8,
+        0 0 200px #02dcd8;
 }
 
 .btn-box {
@@ -150,11 +161,12 @@ body {
 }
 
 .btn-box:hover {
-    box-shadow: 0 0 20px #02dcd8, 0 0 30px #02dcd8;
+    box-shadow:
+        0 0 20px #02dcd8,
+        0 0 30px #02dcd8;
 }
 
-
-/* 🔮 FOTO CIRCULAR COM EFEITO NEON */
+/* FOTO HOME */
 .home-img {
     position: relative;
     width: 400px;
@@ -164,9 +176,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, 0 0 20px #02dcd8, #b70932, #ffb3d9);
+    background: linear-gradient(45deg, #02dcd8, #b70932, #ffb3d9);
     padding: 8px;
-    box-shadow: 0 0 25px #02dcd8, 0 0 50px #ffb3d9, 0 0 100px #b70932;
+    box-shadow:
+        0 0 25px #02dcd8,
+        0 0 50px #ffb3d9,
+        0 0 100px #b70932;
 }
 
 .home-img img {
@@ -176,6 +191,740 @@ body {
     object-fit: cover;
 }
 
+/* SOBRE MIM */
+.about {
+   position: relative;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    margin-bottom: 100px;
+}
+
+.about-img {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #02dcd8, #b70932, #ffb3d9);
+    padding: 8px;
+    box-shadow:
+        0 0 25px #02dcd8,
+        0 0 50px #ffb3d9,
+        0 0 100px #b70932;
+}
+
+.about-text {
+    max-width: 600px;
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: #02dcd8;
+}
+
+/* ------ LINHA ANIMADA H4 ------ */
+.about-text h4 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+    margin: 15px 0 15px; /* diminui para aproximar a linha */
+    position: relative;
+    display: inline-block;
+}
+
+.about-text h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* linha bem colada no texto */
+    width: 100%;
+    height: 3px;
+    background: #02dcd8;
+    border-radius: 5px;
+    animation: linhaAnimada 2s infinite ease-in-out;
+}
+
+.about-text p {
+    color: aliceblue;
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+/* ======== SEÇÃO DE SERVIÇOS ======== */
+
+.services {
+    padding: 100px 0;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 100px;
+    margin-bottom: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    padding-bottom: 150px;
+
+}
+
+.services .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+    text-align: center;
+}
+
+
+/* LISTA DE SERVIÇOS (CARDS) */
+.services-list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 190px;
+}
+
+/* CARD INDIVIDUAL */
+.services-list .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 25px;
+    width: 320px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    /* sombra bonita */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    transition: 0.4s ease;
+    text-align: center;
+}
+
+/* Ícones */
+.services-list .card i {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+/* Título */
+.services-list .card h2 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Texto */
+.services-list .card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #eee;
+}
+
+/* BOTÃO */
+.services-list .card .read {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: #02dcd8;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* HOVER DO CARD */
+.services-list .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    border: 1px solid #02dcd8;
+}
+
+/* Skills */
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+#skills-section {
+    height: 100vh;                 /* ocupa a tela toda */
+    padding-top: 40px;             /* não deixa o título colado no topo */
+    scroll-margin-top: 120px;      /* faz o scroll parar no lugar certo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#skills-section {
+    scroll-margin-top: 120px; /* ajuste conforme a altura real do seu menu */
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.sub-title span {
+    color: #02dcd8;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    scroll-margin-top: 30px;
+
+}
+
+.container1 {
+    width: 450px;
+    padding: 20px;
+}
+
+.heading1 {
+   text-align: center;
+   margin-bottom: 40px;
+   margin-top: -70px;
+   position: relative;
+}
+
+.heading1::after {
+    content: '';
+    position: absolute;
+    left: 27%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 3px;
+    background-color: #02dcd8;
+    border-radius: 5px;
+    animation: linhaAnimada 2s infinite ease-in-out;
+    
+}
+ 
+
+@keyframes underlineGrow {
+    from {width: 0;}
+    to  {width: 180px;}
+}
+
+.bar {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.technical-bars .bar {
+    margin: 10px 0;
+}
+
+.technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bars .bar:last-child{
+    margin-top: 0;
+}
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 600;
+    animation:showText 0.5s 1s linear forwards;
+   /* opacity: 0; /* Oculta o texto inicialmente */
+}
+
+
+.technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s ease forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #02dcd8;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s ease forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 80%;
+}
+
+.progress-line.javascript span {
+    width: 45%;
+}
+
+.progress-line.git span {
+    width: 75%;
+}
+
+.progress-line.github span {
+    width: 70%;
+}
+
+.progress-line.qa span {
+    width: 70%;
+}
+
+.progress-line span::after {
+    position:absolute;
+    padding: 1px 8px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+}
+
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "80%";
+}
+
+.progress-line.javascript span::after {
+    content: "45%";
+}
+
+.progress-line.git span::after {
+    content: "75%";
+}
+
+.progress-line.github span::after {
+    content: "70%";
+}
+
+.progress-line.qa span::after {
+    content: "70%";
+}
+
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: -10px;
+    
+}
+
+.radial-bars .radial-bar {
+    width: 40%;
+    height: 220px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 140px;
+    height: 140px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: #000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+.radial-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 600;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+.radial-bars .radial-bar:nth-child(3),
+.radial-bars .radial-bar:nth-child(4){
+    margin-top: -60px;
+}
+
+@keyframes animate-bar {
+    100%{
+        stroke-dashoffset: -1;
+    }
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #02dcd8;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 {animation: animate-path1 1s 1s linear forwards;}
+.path-2 {animation: animate-path2 1s 1s linear forwards;}
+.path-3 {animation: animate-path3 1s 1s linear forwards;}
+.path-4 {animation: animate-path4 1s 1s linear forwards;}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 40;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+.radial-bar .percentage {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 600;
+    animation: showText 0.5 1s linear forwards;
+    opacity: 1;
+}
+
+.progress-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+/* Secao de Latest Project */
+/* --- TÍTULO DA SESSÃO --- */
+.main-text {
+    padding-top: 50px;
+    margin-top: 80px;
+}
+
+.main-text h2{
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.main-text h2 span {
+    color: #02dcd8;
+}
+
+/* --- GRID DO PORTFÓLIO (IMAGENS LADO A LADO) --- */
+#portfolio {
+    width: 100%;
+    padding: 60px 0; 
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto; /* CENTRALIZA O GRID */
+    padding: 20px;
+}
+
+/* --- CADA CARD DO PROJETO --- */
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 350px;
+}
+
+.row img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* --- HOVER --- */
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), #ffb3d9);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    transition: 0.5s ease;
+    border-radius: 8px;
+}
+
+.row:hover img {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+
+.row:hover .layer {
+    height: 100%;
+}
+
+
+/* Seção Contact */
+.contact {
+    display: flex;
+    flex-direction: column;   /* tudo em uma coluna */
+    align-items: center;      /* centraliza tudo */
+    text-align: center;       /* centraliza textos */
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+/* Título */
+.contact-text h2 {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.contact-text h2 span {
+    color: #02dcd8;
+}
+
+/* Subtítulos e textos */
+.contact-text h4 {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.contact-text p {
+    color: #02dcd8;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+#paragrafo2 {
+    color: white;
+    font-weight: 500;
+}
+
+/* Lista de contato */
+.contact-list {
+    margin-top: 20px;
+}
+
+.contact-list i {
+    color: #02dcd8; 
+    font-size: 20px;
+}
+
+.contact-list li {
+    list-style: none;
+    margin: 6px 0;
+    font-size: 18px;
+    color: white;
+}
+
+/* Ícones */
+.contact-icons a i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #02dcd8;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #02dcd8;
+    margin: 15px 8px;
+    transition: 0.3s;
+}
+
+.contact-icons a i:hover {
+    background: #02dcd8;
+    color: #fff;
+    box-shadow: 0 0 15px #02dcd8;
+}
+
+/* FORMULÁRIO CENTRALIZADO E BONITO */
+.contact-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form form {
+    width: 100%;
+    max-width: 500px;  /* controla o tamanho ideal */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.contact-form .input-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* distância entre os inputs */
+}
+
+.contact-form .input-form input,
+.contact-form .input-form textarea {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    outline: none;
+    background: white;
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+/* placeholdes coloridos */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #f54da1;
+    font-weight: 700;
+}
+
+/* textarea */
+.contact-form textarea {
+    resize: none;
+    height: 180px;
+}
+
+/* BOTÃO CENTRALIZADO */
+.contact-form .send {
+    margin-top: 20px;
+    padding: 14px 40px;
+    background: #02dcd8;
+    border-radius: 40px;
+    border: none;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: none;
+    transition: .3s ease;
+}
+
+.contact-form .send:hover {
+    box-shadow: 0 0 30px #02dcd8;
+}
+
+.footer {
+    background: #1f1f1f;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 2px solid #ff6bd6; /* rosa suave – pode trocar cor */
+}
+
+.footer p {
+    color: #fff;
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+/* ANIMAÇÕES */
 @keyframes slideRight {
     0% {
         opacity: 0;
@@ -197,6 +946,7 @@ body {
         transform: translateX(0px);
     }
 }
+
 @keyframes slideTop {
     0% {
         opacity: 0;
@@ -211,10 +961,29 @@ body {
 @keyframes slideBottom {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateY(-100px);
     }
     100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateY(0px);
+    }
+}
+
+/* Linha animada vai e volta */
+@keyframes linhaAnimada {
+    0% {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    50% {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    51% {
+        transform-origin: right;
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: right;
     }
 }
