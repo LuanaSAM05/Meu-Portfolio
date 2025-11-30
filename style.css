@@ -195,13 +195,12 @@ body {
 .about {
    position: relative;
     width: 100%;
-    height: 100vh;
     justify-content: space-between;
     background: transparent;
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .about-img {
@@ -267,16 +266,14 @@ body {
 /* ======== SEÇÃO DE SERVIÇOS ======== */
 
 .services {
-    padding: 100px 0;
+    padding: 50px 0;
     width: 100%;
     min-height: 100vh;
-    margin-top: 100px;
-    margin-bottom: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-    padding-bottom: 150px;
+    margin-bottom: -60px;
 
 }
 
@@ -396,7 +393,7 @@ section {
 }
 
 .container1 {
-    width: 450px;
+    width: 430px;
     padding: 20px;
 }
 
@@ -687,8 +684,8 @@ section {
 /* Secao de Latest Project */
 /* --- TÍTULO DA SESSÃO --- */
 .main-text {
-    padding-top: 50px;
-    margin-top: 80px;
+    padding-top: 30px;
+    margin-top: 33px;
 }
 
 .main-text h2{
