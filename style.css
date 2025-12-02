@@ -1,523 +1,517 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: poppins, sans-serif;
+    margin: 0; /* remove margens padrão de todos os elementos */
+    padding: 0; /* remove espaçamentos internos padrão */
+    box-sizing: border-box; /* faz larguras incluírem padding e bordas */
+    scroll-behavior: smooth; /* deixa a rolagem suave no site */
+    font-family: poppins, sans-serif; /* define a fonte padrão do site */
 }
 
 
 body {
-    color: #ededed;
-    background: linear-gradient(135deg, #02dcd8, #b70932, #ffb3d9);
-    scroll-behavior: smooth;
-    overscroll-behavior-y: contain;
+    color: #ededed; /* define a cor padrão do texto */
+    background: linear-gradient(135deg, #02dcd8, #b70932, #ffb3d9); /* cria fundo com gradiente diagonal */
+    scroll-behavior: smooth; /* reforça a rolagem suave */
+    overscroll-behavior-y: contain; /* impede a página de "puxar" além do limite vertical */
 }
 
 /* HEADER */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+    position: fixed; /* fixa o header no topo mesmo rolando */
+    top: 0; /* alinha ao topo da página */
+    left: 0; /* alinha à esquerda */
+    width: 100%; /* ocupa toda a largura */
+    padding: 20px 10%; /* espaçamento interno (vertical 20px, lateral 10%) */
+    background: transparent; /* sem fundo sólido */
+    display: flex; /* ativa o flexbox */
+    justify-content: space-between; /* deixa logo à esquerda e menu à direita */
+    align-items: center; /* alinha itens verticalmente */
+    z-index: 100; /* garante que fique acima de tudo */
 }
 
 .logo {
-    position: relative;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: default;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
+    position: relative; /* permite animações personalizadas */
+    font-size: 25px; /* tamanho da fonte da logo */
+    color: #fff; /* cor do texto */
+    text-decoration: none; /* remove sublinhado */
+    font-weight: 600; /* deixa a fonte mais forte */
+    cursor: default; /* seta padrão (não é clicável) */
+    opacity: 0; /* começa invisível para animação */
+    animation: slideRight 1s ease forwards; /* anima entrada pela direita */
 }
 
 .navbar a {
-    display: inline-block;
-    font-size: 25px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
-    opacity: 0;
-    animation: slideTop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+    display: inline-block; /* transforma links em "blocos" alinháveis */
+    font-size: 25px; /* tamanho da fonte */
+    color: #fff; /* cor dos links */
+    text-decoration: none; /* remove sublinhado */
+    font-weight: 500; /* peso da fonte */
+    margin-left: 35px; /* distancia entre cada item do menu */
+    transition: .3s; /* suaviza efeitos */
+    opacity: 0; /* começa invisível */
+    animation: slideTop .5s ease forwards; /* anima vindo de cima */
+    animation-delay: calc(.2s * var(--i)); /* atrasa cada link usando variável CSS */
 }
 
 .navbar a:hover {
-    color: #02dcd8;
+    color: #02dcd8; /* cor ao passar o mouse */
 }
 
 /* HOME */
 .home {
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-    height: 100vh;
-    background:transparent;
-    display: flex;
-    align-items: center;
-    padding: 70px 10% 0;
-    min-height: 100vh;
-    padding-top:100px;
+    position: relative; /* permite elementos internos posicionados */
+    width: 100%; /* ocupa toda a largura */
+    justify-content: space-between; /* separa conteúdo e imagem */
+    height: 100vh; /* ocupa a altura toda da tela */
+    background: transparent; /* sem fundo */
+    display: flex; /* layout flex */
+    align-items: center; /* alinha verticalmente */
+    padding: 70px 10% 0; /* espaçamento interno */
+    min-height: 100vh; /* garante altura mínima */
+    padding-top: 100px; /* espaçamento extra no topo */
 }
 
 .home-content {
-    max-width: 600px;
+    max-width: 600px; /* limita largura do texto */
 }
 
 .home-content h3 {
-    font-size: 36px;
-    font-weight: 500;
-    opacity: 0;
-    animation: slideBottom 1s ease forwards;
-    animation-delay: .7s;
+    font-size: 36px; /* tamanho da fonte */
+    font-weight: 500; /* peso intermediário */
+    opacity: 0; /* começa invisível */
+    animation: slideBottom 1s ease forwards; /* anima vindo de baixo */
+    animation-delay: .7s; /* atraso */
 }
 
 .home-content h3:nth-of-type(2) {
-    margin-bottom: 30px;
-    animation: slideTop 1s ease forwards;
-    animation-delay: .7s;
+    margin-bottom: 30px; /* espaço abaixo */
+    animation: slideTop 1s ease forwards; /* anima vindo de cima */
+    animation-delay: .7s; /* mesmo atraso */
 }
 
 .home-content h3 span {
-    color: #02dcd8;
+    color: #02dcd8; /* destaca “Dev Front-End”, etc. */
 }
 
 .home-content h1 {
-    font-size: 70px;
-    font-weight: 700;
-    margin: -3px 0;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 1s;
+    font-size: 70px; /* título grande */
+    font-weight: 700; /* título bem destacado */
+    margin: -3px 0; /* ajusta espaço entre h3 e h1 */
+    opacity: 0; /* invisível inicial */
+    animation: slideRight 1s ease forwards; /* anima vindo da direita */
+    animation-delay: 1s; /* atraso */
 }
 
 .home-content p {
-    font-size: 25px;
-    line-height: 1.3;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 1s;
+    font-size: 25px; /* tamanho do parágrafo */
+    line-height: 1.3; /* espaçamento entre linhas */
+    opacity: 0; /* invisível no início */
+    animation: slideLeft 1s ease forwards; /* anima da esquerda */
+    animation-delay: 1s; /* atraso */
 }
 
 .home-sci {
-    display: flex;
-    align-items: center;
+    display: flex; /* deixa ícones alinhados em linha */
+    align-items: center; /* centraliza verticalmente */
 }
 
 .home-sci a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #02dcd8;
-    border-radius: 50%;
-    font-size: 30px;
-    color: #02dcd8;
-    text-decoration: none;
-    transition: .5s ease;
-    margin: 30px 35px 30px 0;
-    opacity: 0;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: calc(.2s * var(--i));
+    display: inline-flex; /* alinha ícones dentro do círculo */
+    justify-content: center; /* centraliza horizontal */
+    align-items: center; /* centraliza vertical */
+    width: 40px; /* tamanho do círculo */
+    height: 40px; /* altura igual largura */
+    background: transparent; /* fundo transparente */
+    border: 2px solid #02dcd8; /* borda azul */
+    border-radius: 50%; /* deixa redondo */
+    font-size: 30px; /* tamanho do ícone */
+    color: #02dcd8; /* cor do ícone */
+    text-decoration: none; /* tira sublinhado */
+    transition: .5s ease; /* animação suave */
+    margin: 30px 35px 30px 0; /* espaçamentos */
+    opacity: 0; /* invisível inicial */
+    animation: slideLeft 1s ease forwards; /* animação */
+    animation-delay: calc(.2s * var(--i)); /* ícones entram um por vez */
 }
 
 .home-sci a:hover {
-    background: #02dcd8;
-    color: #fff;
+    background: #02dcd8; /* fundo azul ao passar o mouse */
+    color: #fff; /* ícone fica branco */
     box-shadow:
         0 0 5px #02dcd8,
         0 0 25px #02dcd8,
         0 0 50px #02dcd8,
         0 0 100px #02dcd8,
-        0 0 200px #02dcd8;
+        0 0 200px #02dcd8; /* brilho forte */
 }
 
 .btn-box {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #02dcd8;
-    border-radius: 40px;
-    font-size: 21px;
-    color: #fff;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 25px;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
+    display: inline-block; /* botão tratado como bloco alinhável */
+    padding: 12px 28px; /* espaçamento interno */
+    background: #02dcd8; /* cor do botão */
+    border-radius: 40px; /* bordas arredondadas */
+    font-size: 21px; /* tamanho do texto */
+    color: #fff; /* cor do texto */
+    letter-spacing: 1px; /* espaçamento entre letras */
+    text-decoration: none; /* tira sublinhado */
+    font-weight: 600; /* deixa texto forte */
+    margin-left: 25px; /* espaço à esquerda */
+    opacity: 0; /* invisível inicial */
+    animation: slideTop 1s ease forwards; /* animação */
+    animation-delay: 2s; /* atraso */
 }
 
 .btn-box:hover {
     box-shadow:
         0 0 20px #02dcd8,
-        0 0 30px #02dcd8;
+        0 0 30px #02dcd8; /* brilho ao redor do botão */
 }
 
 /* FOTO HOME */
 .home-img {
-    position: relative;
-    width: 400px;
-    height: 500px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg, #02dcd8, #b70932, #ffb3d9);
-    padding: 8px;
+    position: relative; /* necessário para o conteúdo interno */
+    width: 400px; /* largura da foto */
+    height: 500px; /* altura */
+    border-radius: 50%; /* forma circular */
+    overflow: hidden; /* corta o que passa do círculo */
+    display: flex; /* centraliza a imagem */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    background: linear-gradient(45deg, #02dcd8, #b70932, #ffb3d9); /* borda com gradiente */
+    padding: 8px; /* borda grossa */
     box-shadow:
         0 0 25px #02dcd8,
         0 0 50px #ffb3d9,
-        0 0 100px #b70932;
+        0 0 100px #b70932; /* brilho colorido */
 }
 
 .home-img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 100%; /* imagem ocupa toda a área */
+    height: 100%; /* altura total */
+    border-radius: 50%; /* imagem também fica redonda */
+    object-fit: cover; /* impede distorções, preenche o espaço */
 }
+
 
 /* SOBRE MIM */
 .about {
-   position: relative;
-    width: 100%;
-    justify-content: space-between;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    padding: 70px 10% 0;
-    margin-bottom: 60px;
+   position: relative; /* permite posicionamentos internos */
+   width: 100%; /* ocupa toda a largura */
+   justify-content: space-between; /* separa texto e imagem */
+   background: transparent; /* sem fundo */
+   display: flex; /* coloca imagem e texto lado a lado */
+   align-items: center; /* centraliza verticalmente */
+   padding: 70px 10% 0; /* espaçamento interno superior e laterais */
+   margin-bottom: 60px; /* espaço abaixo da seção */
 }
 
 .about-img {
-    position: relative;
-    width: 400px;
-    height: 500px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg, #02dcd8, #b70932, #ffb3d9);
-    padding: 8px;
+    position: relative; /* permite efeitos internos */
+    width: 400px; /* largura da foto */
+    height: 500px; /* altura */
+    border-radius: 50%; /* deixa circular */
+    display: flex; /* centraliza imagem */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    background: linear-gradient(45deg, #02dcd8, #b70932, #ffb3d9); /* borda gradiente */
+    padding: 8px; /* borda espessa */
     box-shadow:
         0 0 25px #02dcd8,
         0 0 50px #ffb3d9,
-        0 0 100px #b70932;
+        0 0 100px #b70932; /* efeitos de brilho */
 }
 
 .about-text {
-    max-width: 600px;
-    margin-left: 50px;
-    font-size: 25px;
+    max-width: 600px; /* largura máxima do texto */
+    margin-left: 50px; /* espaço entre imagem e texto */
+    font-size: 25px; /* tamanho do texto */
 }
 
 .about-text h2 {
-    font-size: 60px;
+    font-size: 60px; /* título grande */
 }
 
 .about-text h2 span {
-    color: #02dcd8;
+    color: #02dcd8; /* destaque colorido */
 }
 
 /* ------ LINHA ANIMADA H4 ------ */
 .about-text h4 {
-    font-size: 30px;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.4;
-    margin: 15px 0 15px; /* diminui para aproximar a linha */
-    position: relative;
-    display: inline-block;
+    font-size: 30px; /* tamanho do subtítulo */
+    font-weight: 600; /* deixa mais forte */
+    color: #fff; /* cor do texto */
+    line-height: 1.4; /* espaço entre linhas */
+    margin: 15px 0 15px; /* controla espaço vertical */
+    position: relative; /* necessário para a linha animada */
+    display: inline-block; /* linha fica apenas abaixo do texto */
 }
 
 .about-text h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -3px; /* linha bem colada no texto */
-    width: 100%;
-    height: 3px;
-    background: #02dcd8;
-    border-radius: 5px;
-    animation: linhaAnimada 2s infinite ease-in-out;
+    content: ''; /* cria a linha */
+    position: absolute; /* permite colocar abaixo do texto */
+    left: 0; /* começa no início do h4 */
+    bottom: -3px; /* fica perto do texto */
+    width: 100%; /* linha acompanha tamanho do texto */
+    height: 3px; /* espessura */
+    background: #02dcd8; /* cor azul */
+    border-radius: 5px; /* bordas arredondadas */
+    animation: linhaAnimada 2s infinite ease-in-out; /* anima para piscar */
 }
 
 .about-text p {
-    color: aliceblue;
-    font-size: 25px;
-    line-height: 1.4;
-    margin-bottom: 4rem;
+    color: aliceblue; /* cor suave */
+    font-size: 25px; /* tamanho do texto */
+    line-height: 1.4; /* espaçamento entre linhas */
+    margin-bottom: 4rem; /* espaço abaixo */
 }
 
 /* ======== SEÇÃO DE SERVIÇOS ======== */
 
 .services {
-    padding: 50px 0;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-align: start;
-    margin-bottom: -60px;
-
+    padding: 120px 0; /* espaçamento interno vertical grande */
+    width: 100%; /* ocupa toda a largura */
+    min-height: 100vh; /* ocupa a tela toda */
+    display: flex; /* centraliza conteúdo */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    scroll-snap-align: start; /* trava a rolagem no início da seção */
+    margin-bottom: -60px; /* corrige espaçamento */
 }
 
 .services .container {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 40px;
-    text-align: center;
+    width: 100%; /* ocupa toda a largura possível */
+    max-width: 1200px; /* limite da largura */
+    padding: 0 40px; /* espaçamento lateral */
+    text-align: center; /* centraliza textos */
 }
-
 
 /* LISTA DE SERVIÇOS (CARDS) */
 .services-list {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 190px;
+    display: flex; /* alinhamento horizontal */
+    justify-content: center; /* centraliza */
+    align-items: stretch; /* todos os cards mesma altura */
+    gap: 30px; /* espaço entre cards */
+    flex-wrap: wrap; /* permite quebrar linha */
+    margin-bottom: 190px; /* espaço abaixo */
 }
 
 /* CARD INDIVIDUAL */
 .services-list .card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 40px 25px;
-    width: 320px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1); /* fundo translúcido */
+    border-radius: 20px; /* bordas arredondadas */
+    padding: 40px 25px; /* espaçamento interno */
+    width: 320px; /* largura fixa do card */
+    backdrop-filter: blur(10px); /* efeito glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* borda suave */
 
     /* sombra bonita */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* sombra padrão */
 
-    transition: 0.4s ease;
-    text-align: center;
+    transition: 0.4s ease; /* anima suavemente */
+    text-align: center; /* centraliza conteúdo */
 }
 
 /* Ícones */
 .services-list .card i {
-    font-size: 50px;
-    margin-bottom: 15px;
+    font-size: 50px; /* ícone grande */
+    margin-bottom: 15px; /* espaço abaixo */
 }
 
 /* Título */
 .services-list .card h2 {
-    font-size: 1.7rem;
-    margin-bottom: 15px;
-    color: #fff;
+    font-size: 1.7rem; /* tamanho */
+    margin-bottom: 15px; /* espaço abaixo */
+    color: #fff; /* cor branca */
 }
 
 /* Texto */
 .services-list .card p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #eee;
+    font-size: 1rem; /* tamanho padrão */
+    margin-bottom: 20px; /* espaço abaixo */
+    color: #eee; /* cinza claro */
 }
 
 /* BOTÃO */
 .services-list .card .read {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 12px;
-    background: #02dcd8;
-    color: #000;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s;
+    display: inline-block; /* botão em bloco */
+    padding: 10px 20px; /* espaçamento interno */
+    border-radius: 12px; /* cantos arredondados */
+    background: #02dcd8; /* cor azul */
+    color: #000; /* texto preto */
+    font-weight: 600; /* texto forte */
+    text-decoration: none; /* remove sublinhado */
+    transition: 0.3s; /* animação suave */
 }
 
 /* HOVER DO CARD */
 .services-list .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-    border: 1px solid #02dcd8;
+    transform: translateY(-10px); /* card sobe */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35); /* sombra mais forte */
+    border: 1px solid #02dcd8; /* borda azul */
 }
 
 /* Skills */
 .sub-title {
-    text-align: center;
-    font-size: 60px;
-    margin: 0;
-    margin-bottom: 30px;
+    text-align: center; /* centraliza o título */
+    font-size: 60px; /* tamanho grande */
+    margin: 0; /* remove margens padrão */
+    margin-bottom: 30px; /* espaço abaixo */
 }
 
 #skills-section {
-    height: 100vh;                 /* ocupa a tela toda */
-    padding-top: 40px;             /* não deixa o título colado no topo */
-    scroll-margin-top: 120px;      /* faz o scroll parar no lugar certo */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 100vh; /* ocupa a tela toda */
+    padding-top: 40px; /* espaço no topo */
+    scroll-margin-top: 120px; /* corrige âncora ao clicar no menu */
+    display: flex; /* layout flex */
+    flex-direction: column; /* organiza elementos verticalmente */
+    align-items: center; /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
 }
 
 #skills-section {
-    scroll-margin-top: 120px; /* ajuste conforme a altura real do seu menu */
+    scroll-margin-top: 120px; /* repetido — mantém ajuste */
 }
 
 .skills-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 60px;
+    display: flex; /* coloca colunas lado a lado */
+    justify-content: center; /* centraliza */
+    align-items: flex-start; /* alinha no topo */
+    gap: 60px; /* espaço entre colunas */
 }
 
 .sub-title span {
-    color: #02dcd8;
+    color: #02dcd8; /* destaca parte colorida do título */
 }
 
 section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    scroll-margin-top: 30px;
-
+    display: flex; /* organiza conteúdo em linha */
+    flex-wrap: wrap; /* permite quebra */
+    gap: 40px; /* espaço entre itens */
+    justify-content: center; /* centraliza tudo */
+    scroll-margin-top: 30px; /* ajuste de âncora */
 }
 
 .container1 {
-    width: 430px;
-    padding: 20px;
+    width: 430px; /* largura do bloco */
+    padding: 20px; /* espaço interno */
 }
 
 .heading1 {
-   text-align: center;
-   margin-bottom: 40px;
-   margin-top: -70px;
-   position: relative;
+   text-align: center; /* centraliza título */
+   margin-bottom: 40px; /* espaço abaixo */
+   margin-top: -70px; /* puxa título para cima */
+   position: relative; /* necessário para linha animada */
 }
 
 .heading1::after {
-    content: '';
-    position: absolute;
-    left: 27%;
-    bottom: -8px;
-    transform: translateX(-50%);
-    width: 240px;
-    height: 3px;
-    background-color: #02dcd8;
-    border-radius: 5px;
-    animation: linhaAnimada 2s infinite ease-in-out;
-    
+    content: ''; /* cria linha */
+    position: absolute; /* posiciona */
+    left: 27%; /* posição horizontal */
+    bottom: -8px; /* distância do texto */
+    transform: translateX(-50%); /* centraliza */
+    width: 240px; /* comprimento da linha */
+    height: 3px; /* espessura */
+    background-color: #02dcd8; /* cor */
+    border-radius: 5px; /* arredondamento */
+    animation: linhaAnimada 2s infinite ease-in-out; /* pisca */
 }
  
-
 @keyframes underlineGrow {
-    from {width: 0;}
-    to  {width: 180px;}
+    from {width: 0;} /* começa sem largura */
+    to  {width: 180px;} /* cresce até 180px */
 }
 
 .bar {
-    font-size: 23px;
-    font-weight: 600;
+    font-size: 23px; /* tamanho do texto */
+    font-weight: 600; /* deixa forte */
 }
 
 .technical-bars .bar {
-    margin: 10px 0;
+    margin: 10px 0; /* espaço entre cada barra */
 }
 
 .technical-bars .bar:first-child {
-    margin-top: 0;
+    margin-top: 0; /* remove espaço extra do topo */
 }
 
 .technical-bars .bar:last-child{
-    margin-top: 0;
+    margin-top: 0; /* evita espaço indesejado */
 }
 
 .technical-bars .bar .info {
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* espaço antes da barra */
 }
 
 .technical-bars .bar .info span {
-    font-size: 17px;
-    font-weight: 600;
-    animation:showText 0.5s 1s linear forwards;
-   /* opacity: 0; /* Oculta o texto inicialmente */
+    font-size: 17px; /* tamanho da label */
+    font-weight: 600; /* texto forte */
+    animation:showText 0.5s 1s linear forwards; /* animação para aparecer */
+   /* opacity: 0; /* estava comentado: deixaria invisível no início */
 }
-
 
 .technical-bars .bar .progress-line {
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 5px;
-    background-color: #000;
-    animation: animate 1s ease forwards;
-    transform: scaleX(0);
-    transform-origin: left;
+    position: relative; /* permite animações internas */
+    border-radius: 10px; /* bordas arredondadas */
+    width: 100%; /* ocupa toda a largura possível */
+    height: 5px; /* espessura da barra */
+    background-color: #000; /* fundo da barra */
+    animation: animate 1s ease forwards; /* enche a barra */
+    transform: scaleX(0); /* começa vazia */
+    transform-origin: left; /* anima da esquerda pra direita */
 }
-
-@keyframes animate {
+@keyframes animate { /* anima a barra horizontal crescendo */
     100% {
-        transform: scaleX(1);
+        transform: scaleX(1); /* no final, a barra atinge tamanho total */
     }
 }
 
 .technical-bars .bar .progress-line span {
-    height: 100%;
-    background-color: #02dcd8;
-    position: absolute;
-    border-radius: 10px;
-    animation: animate 1s 1s ease forwards;
-    transform: scaleX(0);
-    transform-origin: left;
+    height: 100%; /* ocupa toda a altura da barra */
+    background-color: #02dcd8; /* cor da barra preenchida */
+    position: absolute; /* permite posicionamento livre dentro da linha */
+    border-radius: 10px; /* bordas arredondadas do preenchimento */
+    animation: animate 1s 1s ease forwards; /* anima o crescimento com atraso */
+    transform: scaleX(0); /* começa invisível, sem largura */
+    transform-origin: left; /* anima a partir da esquerda */
 }
 
 .progress-line.html span {
-    width: 90%;
+    width: 90%; /* largura final (valor da skill) */
 }
 
 .progress-line.css span {
-    width: 80%;
+    width: 80%; /* valor da skill */
 }
 
 .progress-line.javascript span {
-    width: 45%;
+    width: 45%; /* valor da skill */
 }
 
 .progress-line.git span {
-    width: 75%;
+    width: 75%; /* valor da skill */
 }
 
 .progress-line.github span {
-    width: 70%;
+    width: 70%; /* valor da skill */
 }
 
 .progress-line.qa span {
-    width: 70%;
+    width: 70%; /* valor da skill */
 }
 
 .progress-line span::after {
-    position:absolute;
-    padding: 1px 8px;
-    background-color: transparent;
-    color: #fff;
-    font-size: 12px;
-    border-radius: 3px;
-    top: -28px;
-    right: -20px;
-    animation: showText 0.5s 1.5s linear forwards;
+    position:absolute; /* posiciona o texto do percentual */
+    padding: 1px 8px; /* espaço interno */
+    background-color: transparent; /* sem fundo */
+    color: #fff; /* cor do texto */
+    font-size: 12px; /* tamanho do texto */
+    border-radius: 3px; /* leve arredondamento */
+    top: -28px; /* sobe o texto acima da barra */
+    right: -20px; /* desloca um pouco à direita */
+    animation: showText 0.5s 1.5s linear forwards; /* aparece suavemente */
 }
 
 .progress-line.html span::after {
-    content: "90%";
+    content: "90%"; /* texto exibido acima da barra */
 }
 
 .progress-line.css span::after {
@@ -541,446 +535,472 @@ section {
 }
 
 .progress-line span::before{
-    content: "";
-    position: absolute;
-    width: 0;
+    content: ""; /* triângulo decorativo abaixo do número */
+    position: absolute; /* posicionamento livre */
+    width: 0; /* cria triângulo via bordas */
     height: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color: #000;
-    top: -10px;
-    right: 0px;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
+    border: 7px solid transparent; /* base para o triângulo */
+    border-bottom-width: 0px; /* remove a base */
+    border-right-width: 0px; /* remove um dos lados */
+    border-top-color: #000; /* triângulo apontando para a barra */
+    top: -10px; /* posiciona acima da barra */
+    right: 0px; /* alinhamento */
+    animation: showText 0.5s 1.5s linear forwards; /* aparece suave */
+    opacity: 0; /* começa invisível */
 }
 
 @keyframes showText {
     100% {
-        opacity: 1;
+        opacity: 1; /* animação para mostrar o texto */
     }
 }
 
 .radial-bars {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: -10px;
-    
+    width: 100%; /* ocupa toda a largura disponível */
+    display: flex; /* ativa layout em linha */
+    flex-wrap: wrap; /* permite quebrar linha */
+    justify-content: center; /* centraliza horizontamente */
+    gap: 20px; /* espaço entre os itens */
+    margin-top: -10px; /* sobe um pouco */
 }
 
 .radial-bars .radial-bar {
-    width: 40%;
-    height: 220px;
-    margin-bottom: 35px;
-    position: relative;
+    width: 40%; /* largura de cada círculo */
+    height: 220px; /* altura do container */
+    margin-bottom: 35px; /* espaço inferior */
+    position: relative; /* permite posicionar textos dentro */
 }
 
 .radial-bars .radial-bar svg {
-    position: absolute;
-    top: 50%;
+    position: absolute; /* centraliza manualmente */
+    top: 50%; /* posiciona no meio */
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 140px;
+    transform: translate(-50%, -50%) rotate(-90deg); /* centraliza + gira o círculo */
+    width: 140px; /* tamanho do SVG */
     height: 140px;
 }
 
 .radial-bars .radial-bar .progress-bar {
-    stroke-width: 10;
-    stroke: #000;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-    animation: animate-bar 1s linear forwards;
+    stroke-width: 10; /* espessura da linha */
+    stroke: #000; /* cor do círculo de fundo */
+    fill: transparent; /* sem preenchimento interno */
+    stroke-dasharray: 502; /* comprimento total */
+    stroke-dashoffset: 502; /* começa invisível */
+    stroke-linecap: round; /* bordas arredondadas */
+    animation: animate-bar 1s linear forwards; /* anima o círculo */
 }
 
 .radial-bar .text {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    font-size: 17px;
-    font-weight: 600;
-    animation: showText 0.5s 1s linear forwards;
+    width: 100%; /* ocupa tudo */
+    position: absolute; /* posiciona livre */
+    text-align: center; /* centraliza texto */
+    left: 50%; /* centro horizontal */
+    bottom: 0; /* fixa na parte inferior */
+    transform: translateX(-50%); /* corrige centralização */
+    font-size: 17px; /* tamanho do texto */
+    font-weight: 600; /* texto mais forte */
+    animation: showText 0.5s 1s linear forwards; /* aparece suavemente */
 }
 
 .radial-bars .radial-bar:nth-child(3),
 .radial-bars .radial-bar:nth-child(4){
-    margin-top: -60px;
+    margin-top: -60px; /* sobe os círculos 3 e 4 */
 }
 
 @keyframes animate-bar {
     100%{
-        stroke-dashoffset: -1;
+        stroke-dashoffset: -1; /* revela o círculo completo */
     }
 }
 
 .path {
-    stroke-width: 10;
-    stroke: #02dcd8;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
+    stroke-width: 10; /* espessura da linha animada */
+    stroke: #02dcd8; /* cor da barra animada */
+    fill: transparent; /* sem fundo */
+    stroke-dasharray: 502; /* comprimento da linha */
+    stroke-dashoffset: 502; /* começa invisível */
+    stroke-linecap: round; /* bordas arredondadas */
 }
 
-.path-1 {animation: animate-path1 1s 1s linear forwards;}
-.path-2 {animation: animate-path2 1s 1s linear forwards;}
-.path-3 {animation: animate-path3 1s 1s linear forwards;}
-.path-4 {animation: animate-path4 1s 1s linear forwards;}
+.path-1 {animation: animate-path1 1s 1s linear forwards;} /* animação do círculo 1 */
+.path-2 {animation: animate-path2 1s 1s linear forwards;} /* animação do círculo 2 */
+.path-3 {animation: animate-path3 1s 1s linear forwards;} /* animação do círculo 3 */
+.path-4 {animation: animate-path4 1s 1s linear forwards;} /* animação do círculo 4 */
 
 @keyframes animate-path1 {
     100% {
-        stroke-dashoffset: 50;
+        stroke-dashoffset: 50; /* porcentagem do círculo */
     }
 }
 
 @keyframes animate-path2 {
     100% {
-        stroke-dashoffset: 40;
+        stroke-dashoffset: 40; /* porcentagem do círculo */
     }
 }
 
 @keyframes animate-path3 {
     100% {
-        stroke-dashoffset: 175;
+        stroke-dashoffset: 175; /* porcentagem do círculo */
     }
 }
 
 @keyframes animate-path4 {
     100% {
-        stroke-dashoffset: 50;
+        stroke-dashoffset: 50; /* porcentagem do círculo */
     }
 }
-
 .radial-bar .percentage {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 17px;
-    font-weight: 600;
-    animation: showText 0.5 1s linear forwards;
-    opacity: 1;
+    position: absolute; /* permite posicionar no centro do círculo */
+    top:50%; /* centro vertical */
+    left: 50%; /* centro horizontal */
+    transform: translate(-50%, -50%); /* corrige para realmente centralizar */
+    font-size: 17px; /* tamanho do texto da porcentagem */
+    font-weight: 600; /* deixa o texto mais forte */
+    animation: showText 0.5 1s linear forwards; /* anima aparecimento */
+    opacity: 1; /* sempre visível após a animação */
 }
 
 .progress-bar .text {
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50%);
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
+    width: 100%; /* ocupa toda a largura do container */
+    position: absolute; /* permite posicionar livremente */
+    text-align: center; /* centraliza o nome da skill */
+    left: 50%; /* centro horizontal */
+    bottom: -5px; /* posiciona logo abaixo do círculo */
+    transform: translateX(-50%); /* centraliza corretamente */
+    font-size: 17px; /* tamanho do texto */
+    font-weight: 500; /* intensidade média */
+    animation: showText 0.5s 1s linear forwards; /* suave aparição */
 }
 
-/* Secao de Latest Project */
-/* --- TÍTULO DA SESSÃO --- */
+/* ================== SEÇÃO LATEST PROJECT ================== */
+
+/* Título geral da sessão */
 .main-text {
-    padding-top: 30px;
-    margin-top: 33px;
+    padding-top: 30px; /* espaço superior */
+    margin-top: 33px; /* distância extra do conteúdo anterior */
 }
 
 .main-text h2{
-    font-size: 60px;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 70px;
+    font-size: 60px; /* tamanho do título */
+    line-height: 1; /* altura da linha bem próxima */
+    text-align: center; /* centralizado */
+    margin-bottom: 70px; /* espaço abaixo do título */
 }
 
 .main-text h2 span {
-    color: #02dcd8;
+    color: #02dcd8; /* destaca a palavra em azul */
 }
 
-/* --- GRID DO PORTFÓLIO (IMAGENS LADO A LADO) --- */
+/* --- GRID DO PORTFÓLIO (projetos) --- */
 #portfolio {
-    width: 100%;
-    padding: 60px 0; 
-    margin-top: 130px;
-    margin-bottom: 130px;
+    width: 100%; /* ocupa toda a largura da página */
+    padding: 60px 0; /* espaço vertical */
+    margin-top: 130px; /* afasta do conteúdo anterior */
+    margin-bottom: 130px; /* espaço inferior */
 }
 
 .portfolio-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto; /* CENTRALIZA O GRID */
-    padding: 20px;
+    display: grid; /* ativa layout em grade */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* se adapta ao tamanho da tela */
+    gap: 30px; /* espaçamento entre os cards */
+    width: 100%; /* largura total */
+    max-width: 1100px; /* limite máximo do grid */
+    margin: 0 auto; /* centraliza o grid */
+    padding: 20px; /* espaço interno */
 }
 
 /* --- CADA CARD DO PROJETO --- */
 .row {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 350px;
+    position: relative; /* importante para o hover overlay */
+    overflow: hidden; /* esconde partes que saem da borda */
+    border-radius: 8px; /* bordas arredondadas */
+    cursor: pointer; /* cursor de clique */
+    width: 100%; /* ocupa todo o espaço disponível */
+    max-width: 350px; /* tamanho máximo do card */
 }
 
 .row img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+    width: 100%; /* imagem ocupa todo o card */
+    height: 200px; /* altura fixa */
+    object-fit: cover; /* corta a imagem sem distorcer */
+    border-radius: 8px; /* bordas arredondadas */
 }
 
-/* --- HOVER --- */
+/* --- HOVER DO CARD --- */
 .layer {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), #ffb3d9);
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    transition: 0.5s ease;
-    border-radius: 8px;
+    width: 100%; /* ocupa toda a largura */
+    height: 0; /* começa invisível */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), #ffb3d9); /* degrade do overlay */
+    position: absolute; /* fica em cima da imagem */
+    left: 0; /* encostado à esquerda */
+    bottom: 0; /* parte inferior do card */
+    overflow: hidden; /* esconde conteúdo enquanto fechado */
+    display: flex; /* organiza conteúdo */
+    flex-direction: column; /* itens em coluna */
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center; /* centraliza horizontalmente */
+    text-align: center; /* texto centralizado */
+    padding: 0 20px; /* espaço interno */
+    transition: 0.5s ease; /* animação suave de expansão */
+    border-radius: 8px; /* bordas iguais ao card */
 }
 
 .row:hover img {
-    transform: scale(1.1);
-    transition: 0.5s ease;
+    transform: scale(1.1); /* zoom suave */
+    transition: 0.5s ease; /* animação suave */
 }
 
 .row:hover .layer {
-    height: 100%;
+    height: 100%; /* overlay cresce cobrindo o card */
 }
 
+/* ===================== SEÇÃO DE CONTATO ===================== */
 
-/* Seção Contact */
 .contact {
-    display: flex;
-    flex-direction: column;   /* tudo em uma coluna */
-    align-items: center;      /* centraliza tudo */
-    text-align: center;       /* centraliza textos */
-    margin-top: 20px;
-    padding: 0 20px;
+    display: flex; /* ativa layout flexível */
+    flex-direction: column; /* coloca tudo em coluna */
+    align-items: center; /* centraliza horizontalmente */
+    text-align: center; /* todo o texto fica centralizado */
+    margin-top: 20px; /* espaço superior */
+    padding: 0 20px; /* espaço interno para não encostar nas bordas */
 }
 
 /* Título */
 .contact-text h2 {
-    font-size: 60px;
-    margin-bottom: 30px;
+    font-size: 60px; /* tamanho grande */
+    margin-bottom: 30px; /* espaço abaixo */
 }
 
 .contact-text h2 span {
-    color: #02dcd8;
+    color: #02dcd8; /* destaque em azul */
 }
 
-/* Subtítulos e textos */
+/* Subtítulos */
 .contact-text h4 {
-    color: white;
-    font-size: 22px;
-    font-weight: 600;
+    color: white; /* cor branca */
+    font-size: 22px; /* tamanho médio */
+    font-weight: 600; /* intensidade forte */
 }
 
+/* Texto principal */
 .contact-text p {
-    color: #02dcd8;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 10px 0;
+    color: #02dcd8; /* azul claro */
+    font-size: 20px; /* tamanho confortável */
+    font-weight: 600; /* mais destaque */
+    margin: 10px 0; /* espaço vertical */
 }
 
+/* Parágrafo específico */
 #paragrafo2 {
-    color: white;
-    font-weight: 500;
+    color: white; /* branco */
+    font-weight: 500; /* mediano */
 }
 
-/* Lista de contato */
+/* Lista de informações (email, número, etc.) */
 .contact-list {
-    margin-top: 20px;
+    margin-top: 20px; /* espaço superior */
 }
 
 .contact-list i {
-    color: #02dcd8; 
-    font-size: 20px;
+    color: #02dcd8; /* cor dos ícones */
+    font-size: 20px; /* tamanho dos ícones */
 }
 
 .contact-list li {
-    list-style: none;
-    margin: 6px 0;
-    font-size: 18px;
-    color: white;
+    list-style: none; /* remove marcadores */
+    margin: 6px 0; /* espaço entre itens */
+    font-size: 18px; /* tamanho do texto */
+    color: white; /* cor das informações */
 }
 
-/* Ícones */
+/* Ícones de redes sociais */
 .contact-icons a i {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    border: 2px solid #02dcd8;
-    border-radius: 50%;
-    font-size: 22px;
-    color: #02dcd8;
-    margin: 15px 8px;
-    transition: 0.3s;
+    display: inline-flex; /* permite centralizar dentro do círculo */
+    justify-content: center; /* centraliza o ícone */
+    align-items: center; /* centraliza */
+    width: 45px; /* tamanho do círculo */
+    height: 45px; /* tamanho do círculo */
+    border: 2px solid #02dcd8; /* borda azul */
+    border-radius: 50%; /* deixa circular */
+    font-size: 22px; /* tamanho do ícone */
+    color: #02dcd8; /* cor do ícone */
+    margin: 15px 8px; /* espaço entre eles */
+    transition: 0.3s; /* animação suave */
 }
 
 .contact-icons a i:hover {
-    background: #02dcd8;
-    color: #fff;
-    box-shadow: 0 0 15px #02dcd8;
+    background: #02dcd8; /* fundo azul */
+    color: #fff; /* ícone branco */
+    box-shadow: 0 0 15px #02dcd8; /* brilho suave */
 }
 
-/* FORMULÁRIO CENTRALIZADO E BONITO */
+/* FORMULÁRIO */
 .contact-form {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* ocupa toda a largura */
+    display: flex; /* ativa flexbox */
+    justify-content: center; /* centraliza o formulário */
 }
 
 .contact-form form {
-    width: 100%;
-    max-width: 500px;  /* controla o tamanho ideal */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+    width: 100%; /* ocupa tudo dentro do espaço permitido */
+    max-width: 500px; /* largura máxima (não fica gigante) */
+    display: flex; /* organiza internamente */
+    flex-direction: column; /* coloca inputs em coluna */
+    align-items: center; /* centraliza tudo no meio */
 }
 
+/* ----------------------------- */
+/*  FORMULÁRIO - CAMPOS E LAYOUT */
+/* ----------------------------- */
+
 .contact-form .input-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* distância entre os inputs */
+    width: 100%; /* faz todos os inputs ocuparem a largura total do formulário */
+    display: flex; /* organiza os inputs */
+    flex-direction: column; /* um embaixo do outro */
+    gap: 15px; /* espaço vertical entre os inputs */
 }
 
 .contact-form .input-form input,
 .contact-form .input-form textarea {
-    width: 100%;
-    padding: 16px;
-    border: none;
-    outline: none;
-    background: white;
-    color: black;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 8px;
+    width: 100%; /* inputs sempre vão ocupar toda a largura */
+    padding: 16px; /* espaço interno (altura e largura) */
+    border: none; /* remove bordas padrão */
+    outline: none; /* remove a borda azul ao clicar */
+    background: white; /* fundo branco */
+    color: black; /* cor do texto digitado */
+    font-size: 1rem; /* tamanho da fonte */
+    font-weight: 600; /* deixa a fonte mais forte */
+    border-radius: 8px; /* cantos arredondados */
 }
 
-/* placeholdes coloridos */
+/* ----------------------------- */
+/*  PLACEHOLDERS (TEXTO APAGADO) */
+/* ----------------------------- */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #f54da1;
-    font-weight: 700;
+    color: #f54da1; /* cor rosa do placeholder */
+    font-weight: 700; /* deixa o placeholder mais forte */
 }
 
-/* textarea */
+/* ----------------------------- */
+/*  TEXTAREA */
+/* ----------------------------- */
 .contact-form textarea {
-    resize: none;
-    height: 180px;
+    resize: none; /* impede o usuário de aumentar o textarea */
+    height: 180px; /* altura fixa */
 }
 
-/* BOTÃO CENTRALIZADO */
+/* ----------------------------- */
+/*  BOTÃO DE ENVIAR */
+/* ----------------------------- */
+
 .contact-form .send {
-    margin-top: 20px;
-    padding: 14px 40px;
-    background: #02dcd8;
-    border-radius: 40px;
-    border: none;
-    font-size: 18px;
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: none;
-    transition: .3s ease;
+    margin-top: 20px; /* espaço acima do botão */
+    padding: 14px 40px; /* altura + largura interna */
+    background: #02dcd8; /* cor azul/ciano */
+    border-radius: 40px; /* deixa formato de pílula */
+    border: none; /* remove borda */
+    font-size: 18px; /* tamanho da fonte */
+    color: white; /* cor do texto */
+    font-weight: 600; /* peso da fonte */
+    cursor: pointer; /* aparece a "mãozinha" */
+    box-shadow: none; /* sem sombra inicialmente */
+    transition: .3s ease; /* anima qualquer mudança em 0.3s */
 }
 
 .contact-form .send:hover {
-    box-shadow: 0 0 30px #02dcd8;
+    box-shadow: 0 0 30px #02dcd8; /* brilho ao redor quando passa o mouse */
 }
 
+/* ----------------------------- */
+/*  RODAPÉ */
+/* ----------------------------- */
+
 .footer {
-    background: #1f1f1f;
-    padding: 25px 0;
-    text-align: center;
-    margin-top: 60px;
-    border-top: 2px solid #ff6bd6; /* rosa suave – pode trocar cor */
+    background: #1f1f1f; /* fundo cinza escuro */
+    padding: 25px 0; /* espaço vertical interno */
+    text-align: center; /* centraliza o conteúdo */
+    margin-top: 60px; /* separação da seção anterior */
+    border-top: 2px solid #ff6bd6; /* linha rosa no topo */
 }
 
 .footer p {
-    color: #fff;
-    font-size: 16px;
-    opacity: 0.85;
+    color: #fff; /* texto branco */
+    font-size: 16px; /* tamanho do texto */
+    opacity: 0.85; /* leve transparência */
 }
 
-/* ANIMAÇÕES */
+/* ----------------------------- */
+/*  ANIMAÇÕES */
+/* ----------------------------- */
+
+/* SLIDE DA ESQUERDA PARA DIREITA */
 @keyframes slideRight {
     0% {
-        opacity: 0;
-        transform: translateX(-100px);
+        opacity: 0; /* começa invisível */
+        transform: translateX(-100px); /* deslocado 100px para a esquerda */
     }
     100% {
-        opacity: 1;
-        transform: translateX(0px);
+        opacity: 1; /* aparece */
+        transform: translateX(0px); /* volta para posição original */
     }
 }
 
+/* SLIDE DA DIREITA PARA ESQUERDA */
 @keyframes slideLeft {
     0% {
-        opacity: 0;
-        transform: translateX(100px);
+        opacity: 0; /* invisível */
+        transform: translateX(100px); /* vem da direita */
     }
     100% {
-        opacity: 1;
-        transform: translateX(0px);
+        opacity: 1; /* aparece */
+        transform: translateX(0px); /* posição final */
     }
 }
 
+/* SLIDE DE BAIXO PARA CIMA */
 @keyframes slideTop {
     0% {
-        opacity: 0;
-        transform: translateY(100px);
+        opacity: 0; /* invisível */
+        transform: translateY(100px); /* deslocado para baixo */
     }
     100% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0px); /* sobe para posição original */
     }
 }
 
+/* SLIDE DE CIMA PARA BAIXO */
 @keyframes slideBottom {
     0% {
         opacity: 0;
-        transform: translateY(-100px);
+        transform: translateY(-100px); /* deslocado para cima */
     }
     100% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0px); /* desce para o lugar */
     }
 }
 
-/* Linha animada vai e volta */
+/* --------------------------------------------- */
+/*  LINHA ANIMADA: VAI ➝ EXPANDE ➝ VOLTA ➝ some  */
+/* --------------------------------------------- */
+
 @keyframes linhaAnimada {
     0% {
-        transform: scaleX(0);
-        transform-origin: left;
+        transform: scaleX(0); /* começa sem largura */
+        transform-origin: left; /* cresce a partir da esquerda */
     }
     50% {
-        transform: scaleX(1);
-        transform-origin: left;
+        transform: scaleX(1); /* linha fica completa */
+        transform-origin: left; /* ainda crescendo pela esquerda */
     }
     51% {
-        transform-origin: right;
+        transform-origin: right; /* ponto de origem muda para direita */
     }
     100% {
-        transform: scaleX(0);
-        transform-origin: right;
+        transform: scaleX(0); /* encolhe até sumir */
+        transform-origin: right; /* some pela direita */
     }
 }

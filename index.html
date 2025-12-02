@@ -1,21 +1,37 @@
 <!DOCTYPE html>
+<!-- Define que o documento é HTML5 -->
 <html lang="pt-br">
+<!-- Define o idioma principal da página -->
 
 <head>
     <meta charset="UTF-8">
+    <!-- Suporte a acentos e caracteres especiais -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site ficar responsivo em celulares -->
+
     <title>Portfólio</title>
+    <!-- Título exibido na aba do navegador -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo principal de estilos -->
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Biblioteca de ícones (Boxicons) -->
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Biblioteca para animação de texto digitado -->
 </head>
 
 <body>
 
+    <!-- ===== HEADER / MENU DE NAVEGAÇÃO ===== -->
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
+        <!-- Logo que leva ao topo -->
 
         <nav class="navbar">
+            <!-- Menu principal -->
             <a href="#home" style="--i:1" class="active ">Home</a>
             <a href="#about" style="--i:2">About Me</a>
             <a href="#services" style="--i:3">Services</a>
@@ -25,12 +41,18 @@
         </nav>
     </header>
 
+    <!-- ===== SEÇÃO HOME ===== -->
     <section class="home" id="home">
         <div class="home-content">
             <h3>Olá, sou eu</h3>
             <h1>Luana Melo.</h1>
+
+            <!-- Texto animado do Typed.js -->
             <h3>E eu sou uma <span class="text"></span></h3>
+
             <br>
+
+            <!-- Pequena biografia -->
             <p>Sou uma Desenvolvedora Web em formação,
                 <br>focada em Front-End e Design de Interfaces.
                 <br> No momento, estou construindo meu portfólio
@@ -38,6 +60,7 @@
                 <br>projetos reais.
             </p>
 
+            <!-- Redes sociais -->
             <div class="home-sci">
                 <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
                 <a href="#" style="--i:8"><i class='bx bxl-instagram'></i></a>
@@ -45,22 +68,29 @@
                 <a href="#" style="--i:10"><i class='bx bxl-linkedin'></i></a>
             </div>
 
+            <!-- Botão principal -->
             <a href="#" class="btn-box">More About Me</a>
         </div>
 
+        <!-- Imagem principal -->
         <div class="home-img">
             <img src="img/Foto1.jpeg" alt="Foto de Luana Melo">
         </div>
     </section>
 
+    <!-- ===== SEÇÃO ABOUT ===== -->
     <section class="about" id="about">
 
+        <!-- Foto da seção Sobre -->
         <img class="about-img" src="img/Foto2.jpeg" alt="Foto de Luana Melo">
 
         <div class="about-text">
             <h2>About <span>Me</span></h2>
             <h4>Full Stack Developer in Training.</h4>
+
             <br><br>
+
+            <!-- Biografia completa -->
             <p>Meu nome é Luana Melo e estou dando meus primeiros passos na área de tecnologia, estudando
                 Desenvolvimento Full Stack pelo DevClub e QA com Gustavo Farias. Descobri na programação uma forma de
                 unir criatividade e lógica, criando interfaces e funcionalidades que realmente ajudam as pessoas. Gosto
@@ -69,11 +99,14 @@
         </div>
     </section>
 
+    <!-- ===== SEÇÃO SERVICES ===== -->
     <section class="services" id="services">
         <div class="container">
+
             <h1 class="sub-title">My <span>Services</span></h1>
 
             <div class="services-list">
+                <!-- Card 1 -->
                 <div class="card">
                     <i class='bx bx-code' style='color:#02dcd8'></i>
                     <h2>UI/UX Designer</h2>
@@ -81,6 +114,7 @@
                     <a href="#" class="read">Saiba Mais</a>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="card">
                     <i class='bx bx-crop' style='color:#02dcd8'></i>
                     <h2>UI/UX Designer</h2>
@@ -88,124 +122,138 @@
                     <a href="#" class="read">Saiba Mais</a>
                 </div>
 
+                <!-- Card 3 -->
                 <div class="card">
                     <i class='bx bxl-apple' style='color:#02dcd8'></i>
                     <h2>UI/UX Designer</h2>
                     <p>Criação de interfaces intuitivas e atraentes para melhorar a experiência do usuário.</p>
                     <a href="#" class="read">Saiba Mais</a>
                 </div>
+
             </div>
         </div>
     </section>
 
-
+    <!-- ===== SEÇÃO SKILLS ===== -->
     <section id="skills-section">
 
-    <h1 class="sub-title">My <span>Skills</span></h1>
+        <h1 class="sub-title">My <span>Skills</span></h1>
 
-    <div class="skills-wrapper">
+        <div class="skills-wrapper">
 
-        <!-- CONTAINER 1 — TECHNICAL SKILLS -->
-        <div class="container1" id="skills">
-            <h1 class="heading1">Technical Skills</h1>
+            <!-- Container 1 — Habilidades Técnicas -->
+            <div class="container1" id="skills">
+                <h1 class="heading1">Technical Skills</h1>
 
-            <div class="technical-bars">
+                <div class="technical-bars">
 
-                <div class="bar">
-                    <i style="color: #f1510d" class='bx bxl-html5'></i>
-                    <div class="info"><span>HTML</span></div>
-                    <div class="progress-line html"><span></span></div>
+                    <!-- Barra HTML -->
+                    <div class="bar">
+                        <i style="color: #f1510d" class='bx bxl-html5'></i>
+                        <div class="info"><span>HTML</span></div>
+                        <div class="progress-line html"><span></span></div>
+                    </div>
+
+                    <!-- Barra CSS -->
+                    <div class="bar">
+                        <i style="color: #147bbc" class='bx bxl-css3'></i>
+                        <div class="info"><span>CSS</span></div>
+                        <div class="progress-line css"><span></span></div>
+                    </div>
+
+                    <!-- Barra JS -->
+                    <div class="bar">
+                        <i style="color: #b0bc1e" class='bx bxl-javascript'></i>
+                        <div class="info"><span>JavaScript</span></div>
+                        <div class="progress-line javascript"><span></span></div>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="bar">
+                        <i style="color: #f13614" class='bx bxl-git'></i>
+                        <div class="info"><span>Git</span></div>
+                        <div class="progress-line git"><span></span></div>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="bar">
+                        <i style="color: #181717" class='bx bxl-github'></i>
+                        <div class="info"><span>GitHub</span></div>
+                        <div class="progress-line github"><span></span></div>
+                    </div>
+
+                    <!-- QA -->
+                    <div class="bar">
+                        <i style="color: #007acc" class='bx bx-search-alt'></i>
+                        <div class="info"><span>QA Testing</span></div>
+                        <div class="progress-line qa"><span></span></div>
+                    </div>
+
                 </div>
-
-                <div class="bar">
-                    <i style="color: #147bbc" class='bx bxl-css3'></i>
-                    <div class="info"><span>CSS</span></div>
-                    <div class="progress-line css"><span></span></div>
-                </div>
-
-                <div class="bar">
-                    <i style="color: #b0bc1e" class='bx bxl-javascript'></i>
-                    <div class="info"><span>JavaScript</span></div>
-                    <div class="progress-line javascript"><span></span></div>
-                </div>
-
-                <div class="bar">
-                    <i style="color: #f13614" class='bx bxl-git'></i>
-                    <div class="info"><span>Git</span></div>
-                    <div class="progress-line git"><span></span></div>
-                </div>
-
-                <div class="bar">
-                    <i style="color: #181717" class='bx bxl-github'></i>
-                    <div class="info"><span>GitHub</span></div>
-                    <div class="progress-line github"><span></span></div>
-                </div>
-
-                <div class="bar">
-                    <i style="color: #007acc" class='bx bx-search-alt'></i>
-                    <div class="info"><span>QA Testing</span></div>
-                    <div class="progress-line qa"><span></span></div>
-                </div>
-
             </div>
-        </div>
 
-        <!-- CONTAINER 2 — PERSONAL SKILLS -->
-        <div class="container1">
-            <h1 class="heading1">Personal Skills</h1>
+            <!-- Container 2 — Habilidades Pessoais -->
+            <div class="container1">
+                <h1 class="heading1">Personal Skills</h1>
 
-            <div class="radial-bars">
+                <div class="radial-bars">
 
-                <div class="radial-bar">
-                    <svg viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
-                    <div class="text">Attention to Detail</div>
+                    <!-- Círculo 1 -->
+                    <div class="radial-bar">
+                        <svg viewBox="0 0 200 200">
+                            <!-- Fundo do círculo -->
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <!-- Linha animada -->
+                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                        <div class="text">Attention to Detail</div>
+                    </div>
+
+                    <!-- Círculo 2 -->
+                    <div class="radial-bar">
+                        <svg viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">95%</div>
+                        <div class="text">Continuous Learning</div>
+                    </div>
+
+                    <!-- Círculo 3 -->
+                    <div class="radial-bar">
+                        <svg viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">65%</div>
+                        <div class="text">Problem Solving</div>
+                    </div>
+
+                    <!-- Círculo 4 -->
+                    <div class="radial-bar">
+                        <svg viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                        <div class="text">Adaptability</div>
+                    </div>
+
                 </div>
-
-                <div class="radial-bar">
-                    <svg viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">95%</div>
-                    <div class="text">Continuous Learning</div>
-                </div>
-
-                <div class="radial-bar">
-                    <svg viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">65%</div>
-                    <div class="text">Problem Solving</div>
-                </div>
-
-                <div class="radial-bar">
-                    <svg viewBox="0 0 200 200">
-                        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                    </svg>
-                    <div class="percentage">90%</div>
-                    <div class="text">Adaptability</div>
-                </div>
-
             </div>
-        </div>
 
-    </div> <!-- skills-wrapper -->
-</section>
-
+        </div> <!-- skills-wrapper -->
     </section>
 
+    <!-- ===== SEÇÃO PORTFOLIO ===== -->
     <section id="portfolio">
         <div class="main-text" id="project">
             <h2>Latest <span>Project</span></h2>
 
             <div class="portfolio-content">
 
+                <!-- Projeto 1 -->
                 <div class="row">
                     <img src="img/Mario.jpeg">
                     <div class="layer">
@@ -215,6 +263,7 @@
                     </div>
                 </div>
 
+                <!-- Projeto 2 -->
                 <div class="row">
                     <img src="img/JokenPo.jpeg">
                     <div class="layer">
@@ -224,6 +273,7 @@
                     </div>
                 </div>
 
+                <!-- Projeto 3 -->
                 <div class="row">
                     <img src="img/Sorteio.jpeg">
                     <div class="layer">
@@ -234,10 +284,10 @@
                 </div>
 
             </div>
-
         </div>
     </section>
 
+    <!-- ===== SEÇÃO CONTATO ===== -->
     <section class="contact" id="contact">
 
         <div class="contact-text">
@@ -247,6 +297,7 @@
             <p>Cada grande projeto começa com uma conversa.</p>
             <p id="paragrafo2">Envie sua mensagem.</p>
 
+            <!-- Lista de informações -->
             <div class="contact-list">
                 <li>
                     <i class='bx bxs-phone'></i>
@@ -259,6 +310,7 @@
                 </li>
             </div>
 
+            <!-- Ícones de redes sociais -->
             <div class="contact-icons">
                 <a href="#" style="--i:7"><i class='bx bxl-facebook'></i></a>
                 <a href="#" style="--i:8"><i class='bx bxl-instagram'></i></a>
@@ -268,6 +320,7 @@
 
         </div>
 
+        <!-- Formulário -->
         <div class="contact-form">
             <form action="">
                 <div class="input-form">
@@ -276,17 +329,20 @@
                     <input type="text" placeholder="Assunto da Mensagem">
                     <textarea cols="40" rows="10" placeholder="Escreva sua Mensagem Aqui"></textarea>
                 </div>
+
+                <!-- Botão enviar -->
                 <input type="submit" value="Enviar Mensagem" class="send">
             </form>
         </div>
 
     </section>
 
-    <!-- Parte Final -->
+    <!-- ===== RODAPÉ ===== -->
     <footer class="footer">
         <p>© 2025 - Todos os direitos reservados | Desenvolvido por Luana Melo</p>
     </footer>
 
+    <!-- Script principal -->
     <script src="script.js"></script>
 </body>
 
